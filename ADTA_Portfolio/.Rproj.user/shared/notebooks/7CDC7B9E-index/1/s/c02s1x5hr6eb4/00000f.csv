@@ -1,0 +1,2 @@
+"0","die <- 1:6"
+"0","roll <- sample(die, 2, replace = TRUE)"
