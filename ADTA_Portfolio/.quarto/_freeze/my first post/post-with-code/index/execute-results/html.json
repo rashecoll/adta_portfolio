@@ -1,0 +1,16 @@
+{
+  "hash": "3f44d28f51c470579482ef74f66839ab",
+  "result": {
+    "markdown": "---\ntitle: \"Simulating Dice Rolls in R\"\nauthor: \"Rashelle Collins\"\ndate: \"2023-05-07\"\ncategories: [R, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nIt is often useful to simulate random events for statistical applications. In this blog post, I will simulate rolling a pair of dice using R and creating some visualizations of the results. For this, I will use R's built in random number generator.\n\n**Step 1: Simulating Dice Rolls**\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndie <- 1:6\nroll <- sample(die, 2, replace = TRUE)\n```\n:::\n\n\n**Step 2: Repeating the Simulation**\n\n\n::: {.cell}\n\n```{.r .cell-code}\nn_simulations <- 10000\nrolls <- numeric(n_simulations)\n\nfor (i in 1:n_simulations) {\n  rolls[i] <- sum(sample(die, 2, replace = TRUE))\n}\n```\n:::\n\n\n**Step 3: Creating Visualizations**\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\n\nggplot(data.frame(rolls), aes(x = rolls)) + \n  geom_histogram(binwidth = 1, color = \"black\", fill = \"white\") +\n  labs(x = \"Sum of Dice Rolls\", y = \"Frequency\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n\n```{.r .cell-code}\nggplot(data.frame(rolls), aes(y = rolls)) + \n  geom_boxplot(color = \"black\", fill = \"white\") +\n  labs(y = \"Sum of Dice Rolls\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-2.png){width=672}\n:::\n:::\n\n\n**I successfully simulated rolling a pair of dice using R, and created some visualizations of these results. This technique can be applied to many other random events in statistical applications.**\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

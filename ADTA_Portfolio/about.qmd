@@ -1,0 +1,12 @@
+---
+title: "Rashelle Collins"
+image: Headshot.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/rashecoll
+---
+
+About this blog
