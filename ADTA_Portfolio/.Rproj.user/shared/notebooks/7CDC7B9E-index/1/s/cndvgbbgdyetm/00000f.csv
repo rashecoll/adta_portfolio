@@ -1,6 +1,0 @@
-"0","n_simulations <- 10000"
-"0","rolls <- numeric(n_simulations)"
-"0",""
-"0","for (i in 1:n_simulations) {"
-"0","  rolls[i] <- sum(sample(die, 2, replace = TRUE))"
-"0","}"

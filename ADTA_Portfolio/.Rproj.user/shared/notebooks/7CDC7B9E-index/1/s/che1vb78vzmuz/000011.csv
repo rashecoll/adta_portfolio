@@ -1,4 +1,0 @@
-"0",""
-"0","ggplot(data.frame(rolls), aes(y = rolls)) + "
-"0","  geom_boxplot(color = ""black"", fill = ""white"") +"
-"0","  labs(y = ""Sum of Dice Rolls"")"
