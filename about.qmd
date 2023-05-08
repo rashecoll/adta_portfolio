@@ -1,6 +1,6 @@
 ---
 title: "Rashelle Collins"
-image: Headshot.jpg
+image: Headshot .jpg
 about:
   template: jolla
   links:
